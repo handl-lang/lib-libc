@@ -1,3 +1,3 @@
 -- lib-libc: modules this package provides (entry defaults to
 -- src/index.hnl; N modules resolve to src/<name>/index.hnl).
-{ modules: ["libc"] }
+{ modules: ["libc"], description: "sdkgen-generated libc FFI bindings.", license: "MIT" }

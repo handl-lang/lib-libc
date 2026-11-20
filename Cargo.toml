@@ -2,9 +2,11 @@
 name = "handl-lib-libc"
 version = "0.1.0"
 edition = "2024"
-description = "libc: sdkgen-generated libc FFI bindings (port + linux-x86_64 adapters) — ADR-0128 split."
-license = "MIT OR Apache-2.0"
+description = "libc: sdkgen-generated libc FFI bindings (port + linux-x86_64 adapters)."
+license = "MIT"
 repository = "https://github.com/handl-lang/lib-libc"
+homepage = "https://github.com/handl-lang/lib-libc"
+readme = "README.md"
 
 # Const-only: pure handl.
 [dependencies]
