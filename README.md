@@ -1,6 +1,6 @@
 # lib-libc
 
-sdkgen-generated libc FFI bindings — generic ports plus the
+codegen-generated libc FFI bindings — generic ports plus the
 `c-linux-x86_64` adapters, emitted under `handl-packages/generated/` (a
 gitignored build artifact). One module per C header (`libc/epoll.hnl` ←
 `sys/epoll.h`, …); `specs/libc.sdkgen.yaml` narrows the surface per header
@@ -19,7 +19,7 @@ pkg.hnl     package manifest — modules, deps, description, license
 
 ```bash
 # one invocation per bound header — see LIBC_HEADERS in scripts/hnl-gate.sh
-hnl sdkgen c /usr/include/sys/epoll.h \
+hnl codegen c /usr/include/sys/epoll.h \
   --output handl-packages/generated/libc \
   --config specs/libc.sdkgen.yaml
 ```

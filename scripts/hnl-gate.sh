@@ -43,9 +43,9 @@ if [ -f "$SPEC_DIR/libc.sdkgen.yaml" ]; then
     sys/mman.h netdb.h sys/random.h sys/socket.h sys/stat.h stdio.h \
     stdlib.h netinet/tcp.h time.h sys/types.h sys/uio.h sys/un.h unistd.h"
   for rel in $LIBC_HEADERS; do
-    echo "== hnl sdkgen c $rel --output $GEN_DIR/libc =="
+    echo "== hnl codegen c $rel --output $GEN_DIR/libc =="
     if h=$(resolve_header "$rel"); then
-      "$HNL" sdkgen c "$h" --output "$GEN_DIR/libc" --config "$SPEC_DIR/libc.sdkgen.yaml"
+      "$HNL" codegen c "$h" --output "$GEN_DIR/libc" --config "$SPEC_DIR/libc.sdkgen.yaml"
     else
       echo "   warning: $rel not found — skipping (install glibc headers)" >&2
     fi
